@@ -23,7 +23,7 @@ function init() {
   alter('#flickr');
   alter('div.gallery');
 
-  if(initLightbox){ initLightbox(); /* reinitialize for firefox */ }
+  if(typeof(initLightbox) === "undefined"){ initLightbox(); /* reinitialize for firefox */ }
 }
 
 Event.observe(window, 'load', init, false);
